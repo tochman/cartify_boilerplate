@@ -43,6 +43,6 @@ In order to get you started with Rails, we've set up a boilerplate application u
  
 7. Run `bundle install` and `rails db:create db:migrate` in your terminal (in the project folder)
 
-8. Commit and push tou your remote.
+8. Commit and push to your remote.
   
 This should give you a clean repo history.
