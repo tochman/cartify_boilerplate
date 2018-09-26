@@ -1,3 +1,4 @@
+@javascript
 Feature: Feature name
 
     Feature Description
@@ -7,7 +8,7 @@ Feature: Feature name
             | name  | price |
             | Pizza | 20    |
             | Pasta | 30    |
-            
+
         And the following users exists
             | email             |
             | random@random.com |
@@ -16,5 +17,7 @@ Feature: Feature name
     Scenario: User visits site and adds products to his order
         Given I visit the site
         And I click "Add to order" for "Pizza"
+        Then I should see "1 item"
         And I click "Checkout"
-        Then I should be on the checkout page
+        Then stop
+        # Then I should be on the checkout page

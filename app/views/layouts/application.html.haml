@@ -7,4 +7,10 @@
     = stylesheet_link_tag    'application', media: 'all', data: {'turbolinks-track' => 'reload'}
     = javascript_include_tag 'application', data: {'turbolinks-track' => 'reload'}
   %body
+    = shop_icon_quantity
+    = link_to "Checkout", cartify.cart_path if current_order
+
+    #notifications
+      = alert
+      = notice
     = yield

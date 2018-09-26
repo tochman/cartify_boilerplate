@@ -3,5 +3,6 @@
 - @products.each do |product|
     %div{id: dom_id(product)}
         = product.name
-        = link_to "Add to order", '#' if user_signed_in?
+        = number_to_currency(product.price, unit: 'kr', format: '%n %u')
+        = add_to_cart(product, 1, "Add to order") if user_signed_in?
 
