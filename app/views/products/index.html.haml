@@ -3,5 +3,5 @@
 - @products.each do |product|
     %div{id: dom_id(product)}
         = product.name
-        = link_to "Add to order", '#'
+        = link_to "Add to order", '#' if user_signed_in?
 

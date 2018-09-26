@@ -7,7 +7,12 @@ Feature: Feature name
             | name  | price |
             | Pizza | 20    |
             | Pasta | 30    |
+            
+        And the following users exists
+            | email             |
+            | random@random.com |
 
+        And I am logged in as "random@random.com"
     Scenario: User visits site and adds products to his order
         Given I visit the site
         And I click "Add to order" for "Pizza"
